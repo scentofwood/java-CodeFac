@@ -1,0 +1,2 @@
+Main-Class: kr.co.fastcampus.LibTest
+Class-Path: lib\logback-classic-1.2.3.jar lib\logback-core-1.2.3.jar lib\slf4j-api-1.7.30.jar
