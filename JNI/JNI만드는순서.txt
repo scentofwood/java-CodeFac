@@ -1,0 +1,44 @@
+
+① JNI를 사용하기 위한 java class를 만든다. 
+   이때 JNI를 위한 dll(리눅스라면 .so) 파일 명과 참조를 위한 function명을 명시해 준다.
+② javac로 컴파일한다.
+③ javah로 C나 C++용 header파일을 만든다.
+④ ③단계에서 만들어진 header파일을 이용하여 C나 C++에서 실제 function의 내용을 작성한다.
+⑤ 작성한 C나 C++ 파일을 1단계에서 명시한 dll(.so) 파일과 동일한 dll(.so) 파일을 만든다.
+⑥ ②단계에서 만든 java class 파일을 실행한다.
+
+
+예제 ///////////////////////////////////////////////////////////////////////////
+
+① java코딩 : EgParameterJNI.java
+② 컴파일   : javac EgParameterJNI.java
+③ 헤더생성 : javah EgParameterJNI
+④ c코딩    : jniegpara.c
+⑤ 컴파일   : C:\Program Files (x86)\Dev-Cpp\MinGW64\bin 위치에서
+              gcc.exe "D:\A_PGM\JNI\jniegpara.c" -o "D:\A_PGM\JNI\jniegpara.dll"  -I"C:\Program Files\Java\jdk1.8.0_121\include\win32" -I"C:\Program Files\Java\jdk1.8.0_121\include" -shared
+⑥ 실행     : java EgParameterJNI
+
+D:\A_PGM\JNI>java EgParameterJNI
+STRING2(Test Program)
+Return Message
+STRING1(*)
+200
+
+D:\A_PGM\JNI>dir
+ D 드라이브의 볼륨: NEW_DISK2
+ 볼륨 일련 번호: 96DE-735A
+
+ D:\A_PGM\JNI 디렉터리
+
+2017-02-15  오전 12:48    <DIR>          .
+2017-02-15  오전 12:48    <DIR>          ..
+2017-02-15  오전 12:38               727 EgParameterJNI.class
+2017-02-14  오후 11:13               679 EgParameterJNI.h
+2017-02-15  오전 12:31               607 EgParameterJNI.java
+2017-02-14  오후 11:29               907 jniegpara.c
+2017-02-15  오전 12:44           112,137 jniegpara.dll
+2017-02-15  오전 12:47             2,547 JNI만드는순서.txt
+               6개 파일             117,604 바이트
+               2개 디렉터리  159,924,293,632 바이트 남음
+
+
