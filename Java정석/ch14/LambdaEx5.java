@@ -20,11 +20,6 @@ class LambdaEx5 {
 
         List<Integer> newList = doSomething(f, list);
         System.out.println(newList);
-
-        //Integer j = new Integer(7);
-        Integer j = 6;
-        j++;
-        System.out.println(j);
     }
 
     private static <T> List<T> doSomething(Function<T, T> f, List<T> list) {
