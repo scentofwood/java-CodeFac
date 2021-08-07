@@ -8,8 +8,9 @@ class Student implements Comparable<Student> {
         this.totalScore = totalScore;
     }
 
+    @Override
     public String toString() {
-        return String.format("[%s, %d, %d]", name, ban, totalScore);
+        return "Student [ban=" + ban + ", name=" + name + ", totalScore=" + totalScore + "]";
     }
 
     public String getName() {
