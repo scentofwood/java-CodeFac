@@ -10,7 +10,8 @@ class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return "Student [ban=" + ban + ", name=" + name + ", totalScore=" + totalScore + "]";
+//        return "Student [ban=" + ban + ", name=" + name + ", totalScore=" + totalScore + "]";
+        return "Student [name=" + name + ", ban=" + ban + ", totalScore=" + totalScore + "]";
     }
 
     public String getName() {
