@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 SW설계 과정중 발생되는 문제점에 대한 해결책을 제시한 규약 형태의 설계패턴
 
 [생구행] 생성,구조,행위 패턴
@@ -13,3 +14,20 @@ SW설계 과정중 발생되는 문제점에 대한 해결책을 제시한 규�
    State, Strategy, Observer, 
    Template Method, Visitor, 
    Blackboard
+=======
+SW설계 과정중 발생되는 문제점에 대한 해결책을 제시한 규약 형태의 설계패턴
+
+[생구행] 생성,구조,행위 패턴
+
+생성 [아비프로시파(ABProSiFa)]
+ - Abstract Factory, Builder, Prototype, Singleton, Factory Method
+
+구조 [ABCD파플로(ABCDFaFlro)]
+ - Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
+
+행위 [CCMMII SSO TV B]
+ - Command, Chain of Responsibility, Memento, Mediator, Iterator, Interpreter, 
+   State, Strategy, Observer, 
+   Template Method, Visitor, 
+   Blackboard
+>>>>>>> e97b4a725efdb8f7fbb47b9238916a892260de42
