@@ -15,7 +15,7 @@ public class Database {
         try {
             prop.load(new FileInputStream(filename));
         } catch (IOException e) {
-
+            System.out.println("프로퍼티 에러");
         }
         return prop;
     }

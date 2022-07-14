@@ -10,7 +10,7 @@ public class HtmlWriter {
     }
     public void title(String title) throws IOException {
         writer.write("<html>");
-        writer.write("<head>");
+        writer.write("<head>" + title + "</head>");
     }
     public void paragraph(String msg) throws IOException {
         writer.write("<p>" + msg + "</p>\n"); 
@@ -24,5 +24,7 @@ public class HtmlWriter {
     public void close() throws IOException {
         writer.write("</body>");
         writer.write("</html>\n");
+        writer.flush();
+        writer.close();
     }
 }
